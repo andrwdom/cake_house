@@ -9,7 +9,9 @@
             window.location.href = "index.html";
         }
     </script>
-    <title>Cakehouse Mobile | Edible Brutalism</title>
+    <title>Cakehouse Chennai — Customized Cakes, Pastries & Snacks</title>
+    <meta name="description"
+        content="Order fresh, handcrafted customized cakes, pastries, and snacks from Cakehouse — Chennai's most loved cake shop with outlets in Nungambakkam, T. Nagar, Ashok Nagar, and Ekkatuthangal.">
 
     <!-- Fonts -->
     <link
@@ -90,6 +92,138 @@
         .loader-clip {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         }
+
+        /* ── MOBILE TESTIMONIALS ── */
+        .m-reviews-section {
+            background: #121212;
+            border-top: 3px solid #FF5E14;
+            border-bottom: 3px solid #FF5E14;
+            padding: 56px 0 64px;
+            overflow: hidden;
+        }
+
+        .m-reviews-row {
+            display: flex;
+            gap: 14px;
+            width: max-content;
+            margin-bottom: 14px;
+        }
+
+        .m-reviews-row:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Reuse existing keyframe names from mobile.html */
+        .m-row-left {
+            animation: marquee 28s linear infinite;
+        }
+
+        .m-row-right {
+            animation: marquee 28s linear infinite reverse;
+        }
+
+        /* Pause on touch */
+        .m-reviews-section:active .m-reviews-row,
+        .m-reviews-section.paused .m-reviews-row {
+            animation-play-state: paused;
+        }
+
+        /* Mobile Review Card */
+        .m-review-card {
+            flex-shrink: 0;
+            width: 80vw;
+            max-width: 300px;
+            background: #FFF8F0;
+            border: 2px solid #FF5E14;
+            border-radius: 18px;
+            padding: 16px 18px;
+            box-shadow: 4px 4px 0px #FF5E14;
+        }
+
+        .m-rc-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .m-rc-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #121212;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Clash Display', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .m-rc-name {
+            font-family: 'Clash Display', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            color: #121212;
+            line-height: 1.2;
+        }
+
+        .m-rc-date {
+            font-family: 'Satoshi', sans-serif;
+            font-size: 11px;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        .m-rc-gicon {
+            width: 18px;
+            height: 18px;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+
+        .m-rc-stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 9px;
+        }
+
+        .m-rc-stars svg {
+            width: 13px;
+            height: 13px;
+        }
+
+        .m-rc-text {
+            font-family: 'Satoshi', sans-serif;
+            font-size: 12.5px;
+            line-height: 1.55;
+            color: #121212;
+            /* clamp to 4 lines */
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            line-clamp: 4;
+            overflow: hidden;
+        }
+
+        .m-rc-helpful {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 12px;
+            border-top: 1px solid rgba(18, 18, 18, 0.12);
+            padding-top: 10px;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 11px;
+            color: #666;
+        }
+
+        .m-rc-helpful svg {
+            width: 12px;
+            height: 12px;
+        }
     </style>
 </head>
 
@@ -163,10 +297,10 @@
                         Brutalism</p>
                 </div>
                 <h1 class="font-display text-[16vw] leading-[0.85] font-bold text-dark tracking-tighter uppercase mb-6">
-                    <div class="overflow-hidden"><span class="block hero-anim translate-y-full">WE DON'T</span></div>
-                    <div class="overflow-hidden"><span class="block hero-anim translate-y-full text-brand">SUGAR</span>
+                    <div class="overflow-hidden"><span class="block hero-anim translate-y-full">CUSTOM</span></div>
+                    <div class="overflow-hidden"><span class="block hero-anim translate-y-full text-brand">CAKES</span>
                     </div>
-                    <div class="overflow-hidden"><span class="block hero-anim translate-y-full">COAT IT.</span></div>
+                    <div class="overflow-hidden"><span class="block hero-anim translate-y-full">CHENNAI.</span></div>
                 </h1>
 
                 <!-- Hero Image Card -->
@@ -192,21 +326,26 @@
         <!-- DIAGONAL MARQUEE -->
         <section class="py-12 bg-dark -skew-y-3 border-y-4 border-brand overflow-hidden relative z-20">
             <div class="flex whitespace-nowrap animate-marquee">
-                <span class="text-6xl font-display font-bold text-cream mx-4">FRESH BAKES</span>
+                <span class="text-6xl font-display font-bold text-cream mx-4">CUSTOM CAKES</span>
                 <span class="text-6xl font-display font-bold text-transparent mx-4"
                     style="-webkit-text-stroke: 1px #FFF8F0;">•</span>
                 <span class="text-6xl font-display font-bold text-transparent mx-4"
                     style="-webkit-text-stroke: 1px #FFF8F0;">NUNGAMBAKKAM</span>
                 <span class="text-6xl font-display font-bold text-transparent mx-4"
                     style="-webkit-text-stroke: 1px #FFF8F0;">•</span>
-                <span class="text-6xl font-display font-bold text-cream mx-4">OPEN 24/7</span>
+                <span class="text-6xl font-display font-bold text-cream mx-4">FRESH CREAM</span>
                 <span class="text-6xl font-display font-bold text-transparent mx-4"
                     style="-webkit-text-stroke: 1px #FFF8F0;">•</span>
-                <span class="text-6xl font-display font-bold text-cream mx-4">FRESH BAKES</span>
+                <span class="text-6xl font-display font-bold text-cream mx-4">CUSTOM CAKES</span>
                 <span class="text-6xl font-display font-bold text-transparent mx-4"
                     style="-webkit-text-stroke: 1px #FFF8F0;">•</span>
                 <span class="text-6xl font-display font-bold text-transparent mx-4"
                     style="-webkit-text-stroke: 1px #FFF8F0;">NUNGAMBAKKAM</span>
+                <span class="text-6xl font-display font-bold text-transparent mx-4"
+                    style="-webkit-text-stroke: 1px #FFF8F0;">•</span>
+                <span class="text-6xl font-display font-bold text-cream mx-4">FRESH CREAM</span>
+                <span class="text-6xl font-display font-bold text-transparent mx-4"
+                    style="-webkit-text-stroke: 1px #FFF8F0;">•</span>
             </div>
         </section>
 
@@ -214,7 +353,7 @@
         <section class="pt-20 pb-12 bg-cream">
             <div class="px-4 mb-6 flex justify-between items-end">
                 <h2 class="font-display text-5xl font-bold uppercase leading-none">
-                    Top <br><span class="text-brand">Hits</span>
+                    Our <br><span class="text-brand">Cakes</span>
                 </h2>
                 <span class="text-xs font-bold border border-dark px-2 py-1 rounded-full">SWIPE &rarr;</span>
             </div>
@@ -228,14 +367,14 @@
                         class="relative aspect-[3/4] rounded-[2rem] border-2 border-dark overflow-hidden shadow-hard bg-white">
                         <div
                             class="absolute top-4 left-4 z-10 bg-brand text-white px-3 py-1 rounded-full text-xs font-bold border border-dark">
-                            #1 SELLER</div>
+                            #1 LOVED</div>
                         <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1000&auto=format&fit=crop"
-                            class="w-full h-[70%] object-cover border-b-2 border-dark" alt="Choco">
+                            class="w-full h-[70%] object-cover border-b-2 border-dark" alt="Ferrero Rocher">
                         <div class="p-6">
-                            <h3 class="font-display text-2xl font-bold uppercase leading-none mb-2">Death By Choco</h3>
+                            <h3 class="font-display text-2xl font-bold uppercase leading-none mb-2">Ferrero Rocher</h3>
                             <div class="flex justify-between items-center">
-                                <span class="font-body font-medium text-sm text-gray-500">Dark & Intense</span>
-                                <span class="font-bold text-xl">₹350</span>
+                                <span class="font-body font-medium text-sm text-gray-500">Super Chocolatey</span>
+                                <span class="font-bold text-xl">Custom</span>
                             </div>
                         </div>
                     </div>
@@ -245,13 +384,13 @@
                 <div class="snap-center shrink-0 w-[80vw]">
                     <div
                         class="relative aspect-[3/4] rounded-[2rem] border-2 border-dark overflow-hidden shadow-hard bg-white">
-                        <img src="https://images.unsplash.com/photo-1626265774643-f1943311a86b?q=80&w=1000&auto=format&fit=crop"
-                            class="w-full h-[70%] object-cover border-b-2 border-dark" alt="Lemon">
+                        <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=1000&auto=format&fit=crop"
+                            class="w-full h-[70%] object-cover border-b-2 border-dark" alt="Red Velvet">
                         <div class="p-6">
-                            <h3 class="font-display text-2xl font-bold uppercase leading-none mb-2">Zesty Lemon</h3>
+                            <h3 class="font-display text-2xl font-bold uppercase leading-none mb-2">Red Velvet</h3>
                             <div class="flex justify-between items-center">
-                                <span class="font-body font-medium text-sm text-gray-500">Sour & Sweet</span>
-                                <span class="font-bold text-xl">₹280</span>
+                                <span class="font-body font-medium text-sm text-gray-500">Moist & Not Sweet</span>
+                                <span class="font-bold text-xl">Custom</span>
                             </div>
                         </div>
                     </div>
@@ -261,13 +400,13 @@
                 <div class="snap-center shrink-0 w-[80vw]">
                     <div
                         class="relative aspect-[3/4] rounded-[2rem] border-2 border-dark overflow-hidden shadow-hard bg-white">
-                        <img src="https://images.unsplash.com/photo-1551024601-564d6d0412f9?q=80&w=1000&auto=format&fit=crop"
-                            class="w-full h-[70%] object-cover border-b-2 border-dark" alt="Donut">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476d?q=80&w=1000&auto=format&fit=crop"
+                            class="w-full h-[70%] object-cover border-b-2 border-dark" alt="Black Forest">
                         <div class="p-6">
-                            <h3 class="font-display text-2xl font-bold uppercase leading-none mb-2">Glazed Ring</h3>
+                            <h3 class="font-display text-2xl font-bold uppercase leading-none mb-2">Black Forest</h3>
                             <div class="flex justify-between items-center">
-                                <span class="font-body font-medium text-sm text-gray-500">Sticky Goodness</span>
-                                <span class="font-bold text-xl">₹120</span>
+                                <span class="font-body font-medium text-sm text-gray-500">Cherries & Cream</span>
+                                <span class="font-bold text-xl">Custom</span>
                             </div>
                         </div>
                     </div>
@@ -295,9 +434,9 @@
                         <div class="relative z-10">
                             <span
                                 class="border border-white/50 px-2 py-1 rounded-full text-xs uppercase font-bold backdrop-blur-md">01.
-                                Atmosphere</span>
+                                Freshly Baked</span>
                         </div>
-                        <h3 class="relative z-10 font-display text-4xl font-bold uppercase">Loud Music.<br>Good Coffee.
+                        <h3 class="relative z-10 font-display text-4xl font-bold uppercase">Made Fresh.<br>Every Day.
                         </h3>
                     </div>
                 </div>
@@ -312,10 +451,10 @@
                         <div class="relative z-10">
                             <span
                                 class="border border-white/50 px-2 py-1 rounded-full text-xs uppercase font-bold backdrop-blur-md">02.
-                                Location</span>
+                                4 Locations</span>
                         </div>
-                        <h3 class="relative z-10 font-display text-4xl font-bold uppercase text-brand">Heart of<br>The
-                            City.</h3>
+                        <h3 class="relative z-10 font-display text-4xl font-bold uppercase text-brand">
+                            Nungambakkam<br>T. Nagar<br><span class="text-white text-2xl">+ 2 more</span></h3>
                     </div>
                 </div>
 
@@ -330,12 +469,51 @@
                         <div class="relative z-10">
                             <span
                                 class="border border-dark/50 px-2 py-1 rounded-full text-xs uppercase font-bold backdrop-blur-md">03.
-                                You</span>
+                                Custom Orders</span>
                         </div>
-                        <h3 class="relative z-10 font-display text-4xl font-bold uppercase">Bring Your<br>Friends.</h3>
+                        <h3 class="relative z-10 font-display text-4xl font-bold uppercase">Your Idea.<br>Our Craft.
+                        </h3>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- TESTIMONIALS (MOBILE) -->
+        <section class="m-reviews-section" id="m-reviews">
+
+            <!-- Header -->
+            <div class="px-4 mb-10 flex items-end justify-between">
+                <h2 class="font-display font-bold uppercase leading-none text-cream" style="font-size:13vw">
+                    They <br><span class="text-brand">Love It.</span>
+                </h2>
+                <div class="text-right">
+                    <div class="inline-flex items-center gap-1 border border-brand/40 rounded-full px-3 py-1">
+                        <svg width="14" height="14" viewBox="0 0 48 48">
+                            <path fill="#EA4335"
+                                d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                            <path fill="#4285F4"
+                                d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                            <path fill="#FBBC05"
+                                d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                            <path fill="#34A853"
+                                d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+                        </svg>
+                        <span class="font-bold text-cream text-xs">Reviews</span>
+                    </div>
+                    <p class="text-cream/40 text-xs mt-1">On Google Maps</p>
+                </div>
+            </div>
+
+            <!-- Row 1: left -->
+            <div class="overflow-hidden mb-3.5">
+                <div class="m-reviews-row m-row-left" id="m-row1"></div>
+            </div>
+
+            <!-- Row 2: right -->
+            <div class="overflow-hidden">
+                <div class="m-reviews-row m-row-right" id="m-row2"></div>
+            </div>
+
         </section>
 
         <!-- LOCATION / MAP -->
@@ -344,12 +522,14 @@
                 class="inline-block bg-white border-2 border-dark rounded-full px-4 py-1 font-bold text-xs mb-6 shadow-hard-sm">
                 FIND US
             </div>
-            <h2 class="font-display text-4xl font-bold uppercase mb-4">
-                Khader Nawaz <br> Khan Road
+            <h2 class="font-display text-4xl font-bold uppercase mb-2">
+                MDR Salai,<br>Nungambakkam
             </h2>
-            <p class="font-medium opacity-80 mb-8 max-w-[200px] mx-auto text-sm">
-                No. 42, Nungambakkam, Chennai 600006. Next to the big tree.
+            <p class="font-medium opacity-80 mb-2 max-w-[260px] mx-auto text-sm">
+                Near Palmgrove Hotel, Nungambakkam, Chennai 600034
             </p>
+            <p class="font-bold text-sm mb-2">Open till 9:30–9:45 PM</p>
+            <p class="text-xs opacity-70 mb-8">Also in T. Nagar · Ashok Nagar · Ekkatuthangal</p>
 
             <div class="w-full aspect-square bg-dark rounded-3xl border-2 border-dark overflow-hidden relative group">
                 <!-- Fake Map Visual -->
@@ -490,6 +670,71 @@
                 });
             }
         });
+
+        // --- MOBILE TESTIMONIAL MARQUEES ---
+        (function () {
+            const reviews = [
+                { name: "Verified Customer", date: "via Zomato", rating: 5, text: "Cake House was absolutely accommodating in fresh cream designs. The cake looked wonderful, I received many compliments. Ordered here for 2 years and will order from nowhere else.", likes: 47 },
+                { name: "Verified Customer", date: "via Zomato", rating: 5, text: "Ferrero Rocher tastes super delicious — it melts and is super chocolatey. Prices are reasonable. Red velvet is very moist unlike anywhere else.", likes: 38 },
+                { name: "Verified Customer", date: "via Justdial", rating: 5, text: "One of the best places to try. Delicious chocolate mousse and polite service. Definitely budget-friendly!", likes: 29 },
+                { name: "Verified Customer", date: "via Justdial", rating: 5, text: "Ordered a birthday cake that was delicious — everyone absolutely loved it!", likes: 21 },
+                { name: "Priya Ramesh", date: "2 wks ago", rating: 5, text: "The Ferrero Rocher cake literally melts in your mouth. Came back three times this week. This place is something special.", likes: 24 },
+                { name: "Arjun Mehta", date: "1 mo ago", rating: 5, text: "Best fresh cream cakes in Chennai — no fondant shortcuts, real ingredients, real care. Truly artisan quality.", likes: 18 },
+                { name: "Sneha Krishnan", date: "3 wks ago", rating: 5, text: "Custom theme cake, every detail nailed. Team was patient with all my references. Exceeded every expectation!", likes: 31 },
+                { name: "Rohan Pillai", date: "5 days ago", rating: 5, text: "Friends thought it was from a 5-star hotel. IT'S THAT GOOD. Looks stunning, tastes even better.", likes: 12 },
+                { name: "Meera Nair", date: "2 mos ago", rating: 5, text: "Birthday, wedding, or just because — Cakehouse never disappoints. Four locations makes it so convenient!", likes: 45 },
+                { name: "Karthik S.", date: "1 wk ago", rating: 5, text: "Walked in for a pastry, left with a smile and a custom cake order. The team genuinely loves what they do.", likes: 9 }
+            ];
+
+            const hues = [14, 30, 200, 270, 330, 160];
+
+            function gIcon() {
+                return `<svg class="m-rc-gicon" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>`;
+            }
+
+            function stars(n) {
+                return Array.from({ length: 5 }, (_, i) => `<svg viewBox="0 0 20 20"><path fill="${i < n ? '#FF5E14' : '#ddd'}" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>`).join('');
+            }
+
+            function card(r) {
+                const init = r.name.split(' ').map(w => w[0]).join('').slice(0, 2);
+                const hue = hues[r.name.charCodeAt(0) % hues.length];
+                return `<div class="m-review-card">
+                    <div class="m-rc-header">
+                        <div class="m-rc-avatar" style="background:hsl(${hue},70%,48%)">${init}</div>
+                        <div>
+                            <div class="m-rc-name">${r.name}</div>
+                            <div class="m-rc-date">${r.date}</div>
+                        </div>
+                        ${gIcon()}
+                    </div>
+                    <div class="m-rc-stars">${stars(r.rating)}</div>
+                    <p class="m-rc-text">${r.text}</p>
+                    <div class="m-rc-helpful">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/><path d="M7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>
+                        Helpful (${r.likes})
+                    </div>
+                </div>`;
+            }
+
+            const half = Math.ceil(reviews.length / 2);
+            const r1 = reviews.slice(0, half);
+            const r2 = reviews.slice(half);
+
+            function fill(id, arr) {
+                const el = document.getElementById(id);
+                if (!el) return;
+                el.innerHTML = [...arr, ...arr].map(card).join('');
+            }
+
+            fill('m-row1', r1);
+            fill('m-row2', r2);
+
+            // Pause on touchstart, resume on touchend
+            const section = document.getElementById('m-reviews');
+            section.addEventListener('touchstart', () => section.classList.add('paused'), { passive: true });
+            section.addEventListener('touchend', () => section.classList.remove('paused'));
+        })();
 
     </script>
 </body>

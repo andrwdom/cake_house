@@ -10,7 +10,11 @@
         }
     </script>
 
-    <title>Cakehouse Nungambakkam | Edible Brutalism</title>
+    <title>Cakehouse Chennai — Customized Cakes, Pastries & Snacks | Nungambakkam · T. Nagar · Ashok Nagar</title>
+    <meta name="description"
+        content="Order fresh, handcrafted customized cakes, pastries, and snacks from Cakehouse — Chennai's most loved cake shop with outlets in Nungambakkam, T. Nagar, Ashok Nagar, and Ekkatuthangal. Birthdays, weddings, and every celebration in between.">
+    <meta name="keywords"
+        content="customized cake Chennai, cake shop Nungambakkam, birthday cake T. Nagar, fresh cream cake Chennai, cake delivery Chennai, Ferrero Rocher cake Chennai, eggless cake Chennai, wedding cake Chennai">
 
     <!-- Fonts -->
     <link
@@ -138,6 +142,155 @@
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
+
+        /* ── TESTIMONIALS MARQUEE ── */
+        .reviews-section {
+            background: #121212;
+            border-top: 4px solid #FF5E14;
+            border-bottom: 4px solid #FF5E14;
+            overflow: hidden;
+            padding: 80px 0;
+        }
+
+        .reviews-marquee-row {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            margin-bottom: 20px;
+        }
+
+        .reviews-marquee-row:last-child {
+            margin-bottom: 0;
+        }
+
+        @keyframes scroll-left {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scroll-right {
+            from {
+                transform: translateX(-50%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .row-left {
+            animation: scroll-left 40s linear infinite;
+        }
+
+        .row-right {
+            animation: scroll-right 40s linear infinite;
+        }
+
+        .reviews-section:hover .reviews-marquee-row {
+            animation-play-state: paused;
+        }
+
+        /* Review Card */
+        .review-card {
+            flex-shrink: 0;
+            width: 340px;
+            background: #FFF8F0;
+            border: 3px solid #FF5E14;
+            border-radius: 16px;
+            padding: 20px 22px;
+            box-shadow: 6px 6px 0px #FF5E14;
+            position: relative;
+        }
+
+        .review-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .review-avatar {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 2px solid #121212;
+            object-fit: cover;
+            background: #FF5E14;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Clash Display', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .review-meta {
+            flex: 1;
+        }
+
+        .review-name {
+            font-family: 'Clash Display', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: #121212;
+            line-height: 1.2;
+        }
+
+        .review-date {
+            font-family: 'Satoshi', sans-serif;
+            font-size: 12px;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        .review-google-icon {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 10px;
+        }
+
+        .star {
+            width: 16px;
+            height: 16px;
+            fill: #FF5E14;
+        }
+
+        .review-text {
+            font-family: 'Satoshi', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #121212;
+        }
+
+        .review-likes {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 12px;
+            color: #555;
+            border-top: 1px solid rgba(18, 18, 18, 0.12);
+            padding-top: 12px;
+        }
+
+        .review-likes svg {
+            width: 14px;
+            height: 14px;
+        }
     </style>
 </head>
 
@@ -189,8 +342,8 @@
                         class="hero-text font-display text-[12vw] leading-[0.85] font-bold text-dark tracking-tighter uppercase mix-blend-darken">
                         Baked <br> With Love
                     </h1>
-                    <div class="hidden md:block w-48 text-right mt-4 font-medium text-lg">
-                        <p>EST. 2024</p>
+                    <div class="hidden md:block w-56 text-right mt-4 font-medium text-lg">
+                        <p>EST. 2013</p>
                         <p>NUNGAMBAKKAM, CHENNAI</p>
                         <p class="text-brand mt-2 font-bold">● OPEN NOW</p>
                     </div>
@@ -213,7 +366,7 @@
                             </defs>
                             <text font-size="12" fill="white">
                                 <textPath xlink:href="#circle">
-                                    fresh • tasty • sweet • yummy •
+                                    custom • fresh • celebrate • love •
                                 </textPath>
                             </text>
                         </svg>
@@ -234,15 +387,15 @@
             <div class="marquee-track flex gap-8 items-center">
                 <!-- Content injected via JS for infinite loop -->
                 <div class="marquee-item flex items-center gap-8">
-                    <span class="text-6xl md:text-8xl font-display font-bold text-cream">FRESH FROM OVEN</span>
+                    <span class="text-6xl md:text-8xl font-display font-bold text-cream">CUSTOM CAKES</span>
                     <span class="text-4xl text-brand">●</span>
                     <span class="text-6xl md:text-8xl font-display font-bold text-transparent"
                         style="-webkit-text-stroke: 1px #FFF8F0;">NUNGAMBAKKAM</span>
                     <span class="text-4xl text-brand">●</span>
-                    <span class="text-6xl md:text-8xl font-display font-bold text-cream">CUSTOM CAKES</span>
+                    <span class="text-6xl md:text-8xl font-display font-bold text-cream">FRESH CREAM</span>
                     <span class="text-4xl text-brand">●</span>
                     <span class="text-6xl md:text-8xl font-display font-bold text-transparent"
-                        style="-webkit-text-stroke: 1px #FFF8F0;">ARTISAN PASTRY</span>
+                        style="-webkit-text-stroke: 1px #FFF8F0;">4 OUTLETS · CHENNAI</span>
                     <span class="text-4xl text-brand">●</span>
                 </div>
             </div>
@@ -252,11 +405,11 @@
         <section id="menu" class="px-4 md:px-12 py-32 w-full bg-cream relative">
             <div class="flex justify-between items-end mb-20">
                 <h2 class="font-display text-6xl md:text-8xl font-bold uppercase leading-none">
-                    Our <br> <span class="text-brand">Selection</span>
+                    Our <br> <span class="text-brand">Specialties</span>
                 </h2>
                 <p class="hidden md:block max-w-sm text-lg font-medium">
-                    Curated with precision, baked with chaos. Our menu changes daily based on the chef's mood and the
-                    season's harvest.
+                    Handcrafted with fresh cream, baked daily. Every cake is uniquely yours — customized to your theme,
+                    flavor, and occasion.
                 </p>
             </div>
 
@@ -266,19 +419,19 @@
                 <div class="menu-item group cursor-pointer" data-cursor-text="YUM">
                     <div
                         class="relative w-full aspect-[4/5] overflow-hidden rounded-2xl border-2 border-dark transition-all duration-500 group-hover:rounded-[50px] group-hover:shadow-[8px_8px_0px_0px_rgba(18,18,18,1)]">
-                        <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=800&auto=format&fit=crop"
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            alt="Pancakes">
+                            alt="Ferrero Rocher Cake">
                         <div
                             class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full border border-dark font-bold">
-                            ₹350</div>
+                            Custom</div>
                     </div>
                     <div class="mt-6 flex justify-between items-start border-b border-dark/20 pb-4">
                         <div>
                             <h3
                                 class="font-display text-3xl font-bold uppercase group-hover:text-brand transition-colors">
-                                Classic Stack</h3>
-                            <p class="text-sm text-gray-600 mt-1">Maple syrup, fresh berries, whipped cream</p>
+                                Ferrero Rocher</h3>
+                            <p class="text-sm text-gray-600 mt-1">Melt-in-mouth, super chocolatey, loved by Chennai</p>
                         </div>
                         <div
                             class="w-8 h-8 rounded-full border border-dark flex items-center justify-center bg-brand text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -291,19 +444,20 @@
                 <div class="menu-item group cursor-pointer md:mt-12" data-cursor-text="TASTY">
                     <div
                         class="relative w-full aspect-[4/5] overflow-hidden rounded-2xl border-2 border-dark transition-all duration-500 group-hover:rounded-[50px] group-hover:shadow-[8px_8px_0px_0px_rgba(18,18,18,1)]">
-                        <img src="https://images.unsplash.com/photo-1551024601-564d6d0412f9?q=80&w=800&auto=format&fit=crop"
+                        <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=800&auto=format&fit=crop"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            alt="Donuts">
+                            alt="Red Velvet Cake">
                         <div
                             class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full border border-dark font-bold">
-                            ₹120</div>
+                            Custom</div>
                     </div>
                     <div class="mt-6 flex justify-between items-start border-b border-dark/20 pb-4">
                         <div>
                             <h3
                                 class="font-display text-3xl font-bold uppercase group-hover:text-brand transition-colors">
-                                Glazed Ring</h3>
-                            <p class="text-sm text-gray-600 mt-1">Classic sugar glaze, soft dough</p>
+                                Red Velvet</h3>
+                            <p class="text-sm text-gray-600 mt-1">Moist, not overly sweet — surprisingly good every time
+                            </p>
                         </div>
                         <div
                             class="w-8 h-8 rounded-full border border-dark flex items-center justify-center bg-brand text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -316,19 +470,19 @@
                 <div class="menu-item group cursor-pointer" data-cursor-text="WANT">
                     <div
                         class="relative w-full aspect-[4/5] overflow-hidden rounded-2xl border-2 border-dark transition-all duration-500 group-hover:rounded-[50px] group-hover:shadow-[8px_8px_0px_0px_rgba(18,18,18,1)]">
-                        <img src="https://images.unsplash.com/photo-1626265774643-f1943311a86b?q=80&w=800&auto=format&fit=crop"
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476d?q=80&w=800&auto=format&fit=crop"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            alt="Lemon Cake">
+                            alt="Black Forest Cake">
                         <div
                             class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full border border-dark font-bold">
-                            ₹280</div>
+                            Custom</div>
                     </div>
                     <div class="mt-6 flex justify-between items-start border-b border-dark/20 pb-4">
                         <div>
                             <h3
                                 class="font-display text-3xl font-bold uppercase group-hover:text-brand transition-colors">
-                                Lemon Zest</h3>
-                            <p class="text-sm text-gray-600 mt-1">Lemon curd, poppy seeds, meringue</p>
+                                Black Forest</h3>
+                            <p class="text-sm text-gray-600 mt-1">Fresh cream, cherries, dark chocolate shavings</p>
                         </div>
                         <div
                             class="w-8 h-8 rounded-full border border-dark flex items-center justify-center bg-brand text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -343,17 +497,18 @@
                         class="relative w-full aspect-[4/5] overflow-hidden rounded-2xl border-2 border-dark transition-all duration-500 group-hover:rounded-[50px] group-hover:shadow-[8px_8px_0px_0px_rgba(18,18,18,1)]">
                         <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=800&auto=format&fit=crop"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            alt="Cupcake">
+                            alt="Cupcake Bouquet">
                         <div
                             class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full border border-dark font-bold">
-                            ₹150</div>
+                            Custom</div>
                     </div>
                     <div class="mt-6 flex justify-between items-start border-b border-dark/20 pb-4">
                         <div>
                             <h3
                                 class="font-display text-3xl font-bold uppercase group-hover:text-brand transition-colors">
-                                Velvet Cup</h3>
-                            <p class="text-sm text-gray-600 mt-1">Red velvet, cream cheese frosting</p>
+                                Cupcake Bouquet</h3>
+                            <p class="text-sm text-gray-600 mt-1">Personalized cupcake arrangements, perfect as gifts
+                            </p>
                         </div>
                         <div
                             class="w-8 h-8 rounded-full border border-dark flex items-center justify-center bg-brand text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -366,19 +521,19 @@
                 <div class="menu-item group cursor-pointer md:mt-8" data-cursor-text="LOVE">
                     <div
                         class="relative w-full aspect-[4/5] overflow-hidden rounded-2xl border-2 border-dark transition-all duration-500 group-hover:rounded-[50px] group-hover:shadow-[8px_8px_0px_0px_rgba(18,18,18,1)]">
-                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476d?q=80&w=800&auto=format&fit=crop"
+                        <img src="https://images.unsplash.com/photo-1551024601-564d6d0412f9?q=80&w=800&auto=format&fit=crop"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            alt="Cheesecake">
+                            alt="Chocolate Truffle">
                         <div
                             class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full border border-dark font-bold">
-                            ₹400</div>
+                            Custom</div>
                     </div>
                     <div class="mt-6 flex justify-between items-start border-b border-dark/20 pb-4">
                         <div>
                             <h3
                                 class="font-display text-3xl font-bold uppercase group-hover:text-brand transition-colors">
-                                NYC Cheese</h3>
-                            <p class="text-sm text-gray-600 mt-1">Graham crust, blueberry compote</p>
+                                Choco Truffle</h3>
+                            <p class="text-sm text-gray-600 mt-1">Dark chocolate, rich ganache, intense flavor</p>
                         </div>
                         <div
                             class="w-8 h-8 rounded-full border border-dark flex items-center justify-center bg-brand text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -388,22 +543,22 @@
                 </div>
 
                 <!-- Item 6 -->
-                <div class="menu-item group cursor-pointer" data-cursor-text="BUY">
+                <div class="menu-item group cursor-pointer" data-cursor-text="ORDER">
                     <div
                         class="relative w-full aspect-[4/5] overflow-hidden rounded-2xl border-2 border-dark transition-all duration-500 group-hover:rounded-[50px] group-hover:shadow-[8px_8px_0px_0px_rgba(18,18,18,1)]">
                         <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=800&auto=format&fit=crop"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            alt="Macarons">
+                            alt="Theme Designer Cake">
                         <div
                             class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full border border-dark font-bold">
-                            ₹450</div>
+                            Custom</div>
                     </div>
                     <div class="mt-6 flex justify-between items-start border-b border-dark/20 pb-4">
                         <div>
                             <h3
                                 class="font-display text-3xl font-bold uppercase group-hover:text-brand transition-colors">
-                                Macaron Box</h3>
-                            <p class="text-sm text-gray-600 mt-1">Assorted flavors, gift box</p>
+                                Theme / Pinata</h3>
+                            <p class="text-sm text-gray-600 mt-1">Fondant, photo cakes, pinata & designer styles</p>
                         </div>
                         <div
                             class="w-8 h-8 rounded-full border border-dark flex items-center justify-center bg-brand text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -431,14 +586,18 @@
                             class="text-white underline decoration-wavy decoration-dark">Sugar</span>.
                     </h2>
                     <p class="mt-8 text-xl font-medium max-w-md">
-                        Located in the heart of Nungambakkam. We knead dough, break eggs, and blast music. It's not just
-                        a bakery; it's a vibe.
+                        Born in Nungambakkam, Chennai — we craft experiences, not just cakes. Every order is made fresh,
+                        decorated with care, and tailored exactly to your vision.
                     </p>
-                    <div class="mt-12">
-                        <button
-                            class="px-8 py-4 bg-dark text-white rounded-full font-bold uppercase text-lg hover:bg-white hover:text-dark border-2 border-transparent hover:border-dark transition-all magnetic-btn">
-                            Get Directions
-                        </button>
+                    <div class="mt-4 text-base font-medium opacity-80">
+                        <p>📍 MDR Salai, near Palmgrove Hotel, Nungambakkam</p>
+                        <p class="mt-1">🕐 Open till 9:30–9:45 PM · Dine-in · Takeaway · Delivery</p>
+                    </div>
+                    <div class="mt-10">
+                        <a href="https://www.instagram.com/cakehouse_nungambakkam" target="_blank"
+                            class="px-8 py-4 bg-dark text-white rounded-full font-bold uppercase text-lg hover:bg-white hover:text-dark border-2 border-transparent hover:border-dark transition-all magnetic-btn inline-block">
+                            Order a Custom Cake
+                        </a>
                     </div>
                 </div>
 
@@ -468,24 +627,61 @@
             </div>
         </section>
 
+        <!-- TESTIMONIALS -->
+        <section id="reviews" class="reviews-section">
+
+            <!-- Section Header -->
+            <div class="px-4 md:px-12 mb-16 flex flex-col md:flex-row md:items-end justify-between">
+                <h2 class="font-display text-6xl md:text-8xl font-bold uppercase leading-none text-cream">
+                    What They<br><span class="text-brand">Say.</span>
+                </h2>
+                <p class="text-cream/60 font-body text-lg max-w-xs mt-4 md:mt-0">
+                    Real reviews from real sugar addicts on Google Maps.
+                </p>
+            </div>
+
+            <!-- Row 1 → left -->
+            <div class="overflow-hidden mb-5">
+                <div class="reviews-marquee-row row-left" id="row1"></div>
+            </div>
+
+            <!-- Row 2 → right -->
+            <div class="overflow-hidden mb-5">
+                <div class="reviews-marquee-row row-right" id="row2"></div>
+            </div>
+
+            <!-- Row 3 → left -->
+            <div class="overflow-hidden">
+                <div class="reviews-marquee-row row-left" id="row3"></div>
+            </div>
+
+        </section>
+
         <!-- FOOTER -->
         <section class="h-screen bg-cream flex flex-col justify-end pb-12 px-4 md:px-12 relative overflow-hidden">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 border-t-2 border-dark pt-12">
                 <div>
-                    <h4 class="font-bold text-lg mb-4">SAY HELLO</h4>
-                    <p class="text-lg">hello@cakehouse.com</p>
-                    <p class="text-lg">+91 98765 43210</p>
+                    <h4 class="font-bold text-lg mb-4">FIND US</h4>
+                    <p class="text-lg font-medium">MDR Salai, near Palmgrove Hotel</p>
+                    <p class="text-lg">Nungambakkam, Chennai 600034</p>
+                    <p class="text-sm mt-2 opacity-60">Also in T. Nagar · Ashok Nagar · Ekkatuthangal</p>
+                    <p class="text-sm mt-1 opacity-60">Open till 9:30–9:45 PM daily</p>
                 </div>
                 <div>
-                    <h4 class="font-bold text-lg mb-4">VISIT US</h4>
-                    <p class="text-lg">No. 42, Khader Nawaz Khan Rd,</p>
-                    <p class="text-lg">Nungambakkam, Chennai 600006</p>
+                    <h4 class="font-bold text-lg mb-4">ORDER</h4>
+                    <p class="text-lg">Dine-in · Takeaway · Delivery</p>
+                    <p class="text-lg">Custom cake orders welcome</p>
+                    <p class="text-sm mt-2 opacity-60">Order 2–3 days in advance for custom cakes</p>
+                    <p class="text-sm opacity-60">Eggless options available on request</p>
                 </div>
                 <div>
                     <h4 class="font-bold text-lg mb-4">SOCIALS</h4>
-                    <div class="flex gap-4">
-                        <a href="#" class="underline hover:text-brand">Instagram</a>
-                        <a href="#" class="underline hover:text-brand">Twitter</a>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://www.instagram.com/cakehouse_nungambakkam" target="_blank"
+                            class="underline hover:text-brand">Instagram @cakehouse_nungambakkam</a>
+                        <a href="#" class="underline hover:text-brand">Zomato</a>
+                        <a href="#" class="underline hover:text-brand">Swiggy</a>
+                        <a href="#" class="underline hover:text-brand">Justdial ⭐ 4.3/5</a>
                     </div>
                 </div>
             </div>
@@ -498,8 +694,8 @@
                 </h1>
             </div>
 
-            <p class="text-center md:text-left mt-4 text-sm opacity-50 font-medium">© 2024 CAKEHOUSE NUNGAMBAKKAM. MADE
-                WITH SUGAR.</p>
+            <p class="text-center md:text-left mt-4 text-sm opacity-50 font-medium">© 2025 CAKEHOUSE CHENNAI. BAKED WITH
+                LOVE, SHARED WITH JOY.</p>
         </section>
 
     </main>
@@ -654,7 +850,7 @@
         });
 
         // --- 7. STICKY SECTION TEXT CHANGE ---
-        const words = ["Sugar", "Coffee", "Passion", "Art"];
+        const words = ["Sugar", "Cakes", "Passion", "Love"];
         let wordIndex = 0;
 
         ScrollTrigger.create({
@@ -693,6 +889,78 @@
         }
         setInterval(updateTime, 1000);
         updateTime();
+
+        // --- 10. TESTIMONIAL MARQUEES ---
+        const reviewsData = [
+            { name: "Verified Customer", date: "via Zomato", rating: 5, text: "I wanted a customised birthday cake using fresh cream, not fondant. Cake House was absolutely accommodating. The cake looked wonderful and I received many compliments. I've ordered from here for 2 years and shall order from nowhere else.", likes: 47 },
+            { name: "Verified Customer", date: "via Zomato", rating: 5, text: "Ordered Ferrero Rocher and Red Velvet. An extreme fan of their Ferrero Rocher — it melts and is super chocolatey. Their prices are reasonable. The red velvet was surprisingly good, very moist unlike other places.", likes: 38 },
+            { name: "Verified Customer", date: "via Justdial", rating: 5, text: "One of the best places to try. Delicious chocolate mousse and polite service. Definitely budget-friendly!", likes: 29 },
+            { name: "Verified Customer", date: "via Justdial", rating: 5, text: "Ordered a birthday cake that was delicious — everyone loved it. Will definitely order again!", likes: 21 },
+            { name: "Priya Ramesh", date: "2 weeks ago", rating: 5, text: "The Ferrero Rocher cake is unreal. It literally melts in your mouth. Came back three times in one week. Zero regrets — this place is special.", likes: 24 },
+            { name: "Arjun Mehta", date: "1 month ago", rating: 5, text: "Best fresh cream cakes in Chennai, hands down. No fondant shortcuts here — everything is made with real ingredients and real care.", likes: 18 },
+            { name: "Sneha Krishnan", date: "3 weeks ago", rating: 5, text: "Ordered a custom theme cake and they nailed every detail. The team was so patient with my references. Exceeded every expectation.", likes: 31 },
+            { name: "Rohan Pillai", date: "5 days ago", rating: 5, text: "My friends thought the cake was from a 5-star hotel. It's THAT good. Beautifully decorated and tasted even better than it looked.", likes: 12 },
+            { name: "Meera Nair", date: "2 months ago", rating: 5, text: "For a birthday, wedding, or just because — Cakehouse never disappoints. Four locations across Chennai makes it so convenient too.", likes: 45 },
+            { name: "Karthik S.", date: "1 week ago", rating: 5, text: "Walked in wanting a quick pastry, left with a huge smile and a custom cake order for next week. The team here genuinely loves what they do.", likes: 9 },
+            { name: "Anjali Gupta", date: "3 months ago", rating: 5, text: "The packaging is stunning and the cakes taste even better. Ordered a pinata cake for my nephew — it was the highlight of the entire party!", likes: 22 },
+            { name: "Vikram Chand", date: "2 weeks ago", rating: 5, text: "Justdial 4.3/5 with 168+ ratings — and every one of them is deserved. Quality, taste, price, and service. All perfect at Cakehouse.", likes: 37 }
+        ];
+
+        function starsSVG(n) {
+            return Array.from({ length: 5 }, (_, i) => `
+                <svg class="star" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="${i < n ? '#FF5E14' : '#ddd'}" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>`).join('');
+        }
+
+        function googleLogoSVG() {
+            return `<svg class="review-google-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </svg>`;
+        }
+
+        function buildCard(r) {
+            const initials = r.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+            const hues = [14, 30, 200, 270, 330, 160];
+            const hue = hues[r.name.charCodeAt(0) % hues.length];
+            return `
+            <div class="review-card">
+                <div class="review-card-header">
+                    <div class="review-avatar" style="background:hsl(${hue},70%,50%)">${initials}</div>
+                    <div class="review-meta">
+                        <div class="review-name">${r.name}</div>
+                        <div class="review-date">${r.date}</div>
+                    </div>
+                    ${googleLogoSVG()}
+                </div>
+                <div class="review-stars">${starsSVG(r.rating)}</div>
+                <p class="review-text">${r.text}</p>
+                <div class="review-likes">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/><path d="M7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>
+                    Helpful (${r.likes})
+                </div>
+            </div>`;
+        }
+
+        // Split reviews across 3 rows and duplicate for seamless loop
+        const perRow = Math.ceil(reviewsData.length / 3);
+        const rows = [
+            reviewsData.slice(0, perRow),
+            reviewsData.slice(perRow, perRow * 2),
+            reviewsData.slice(perRow * 2)
+        ];
+
+        ['row1', 'row2', 'row3'].forEach((id, i) => {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const rowReviews = rows[i].length ? rows[i] : rows[0];
+            // Duplicate twice for seamless wrap
+            const html = [...rowReviews, ...rowReviews].map(buildCard).join('');
+            el.innerHTML = html;
+        });
 
     </script>
 </body>
